@@ -39,7 +39,7 @@ class Jankenpo {
     /**
      * Converts the option to a integer related to a constant
      * 
-     * @access private
+     * @access public
      * 
      * @throws \OutOfBoundsException If the $option parameter is not 'p', 'r' or 's'  
      * 
@@ -47,7 +47,7 @@ class Jankenpo {
      * 
      * @return int
      */
-    private function convertCharacterOptionToIntegerOption($option) {
+    public function convertCharacterOptionToIntegerOption($option) {
         if ($option == 'p') {
             return self::PAPER;
         }
@@ -68,13 +68,13 @@ class Jankenpo {
      * 
      * @throws \OutOfBoundsException If the $option parameter is not >= 1 an < =3  
      *
-     * @access private
+     * @access public
      * 
      * @param integer $integerOption The character related to the user option
      * 
      * @return string
      */
-    private function convertIntegerOptionToStringOption($option) {
+    public function convertIntegerOptionToStringOption($option) {
         if ($option == self::PAPER) {
             return 'paper';
         }
