@@ -11,4 +11,4 @@ while ($characterUserOption != 'p' && $characterUserOption != 'r' && $characterU
     $characterUserOption = readline("Please insert 'p' for paper or 's' for scissor or 'r' for rock: ");
 }
 
-$Jankenpo->process($characterUserOption);
+$Jankenpo->process($characterUserOption, false);
