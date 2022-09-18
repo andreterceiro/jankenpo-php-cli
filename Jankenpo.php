@@ -35,7 +35,7 @@ class Jankenpo {
         $stringComputerOption = $this->convertIntegerOptionToStringOption($integerComputerOption);
 
         $dataToReturn = self::INTEGER_DRAW; 
-        if (($integerUserOption == 1 && $integerComputerOption == 2) || ($integerUserOption == 2 && $integerComputerOption == 3) || ($integerUserOption == 3 && $integerComputerOption == 1)) {
+        if (($integerUserOption == self::PAPER && $integerComputerOption == self::ROCK) || ($integerUserOption == self::ROCK && $integerComputerOption == self::SCISSOR) || ($integerUserOption == self::SCISSOR && $integerComputerOption == self::PAPER)) {
             $winnerStringMessage = "player wins";
             $dataToReturn = self::INTEGER_PLAYER_WINS;
         } else if ($integerUserOption == $integerComputerOption) {

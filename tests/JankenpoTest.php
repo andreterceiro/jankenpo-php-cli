@@ -108,7 +108,7 @@ class JankenpoTest extends \PHPUnit\Framework\TestCase {
     }
 
     /**
-     * Tests the conversion of 's' to 3
+     * Tests the conversion of '3' to scissor
      * 
      * @access public
      * 

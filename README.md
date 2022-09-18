@@ -1,3 +1,5 @@
 Jankenpo to be played in the terminal.
 
-The tests are in the 'tests' directory. We have a file 'test.sh' in the root directory that invokes PHP Unit
+The tests are in the 'tests' directory. We have a file 'test.sh' in the root directory that invokes PHP Unit.
+
+Video ilustrating the execution: https://youtu.be/EMLeUdf-hGk
