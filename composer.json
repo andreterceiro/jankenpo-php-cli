@@ -1,0 +1,15 @@
+{
+    "name": "andredepaulaterceiro/jankenpo-php-cli",
+    "description": "Jankenpo",
+    "type": "project",
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "André de Paula Terceiro",
+            "email": "andre@terceiro.com.br"
+        }
+    ]
+}
