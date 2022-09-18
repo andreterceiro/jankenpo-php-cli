@@ -29,7 +29,7 @@ class JankenpoTest extends \PHPUnit\Framework\TestCase {
      * 
      * @return null
      */
-    public function testConvertPTo1() {
+    public function testConversionOfPTo1() {
         $this->assertEquals(
             $this->Jankenpo->convertCharacterOptionToIntegerOption('p'),
             1
@@ -43,7 +43,7 @@ class JankenpoTest extends \PHPUnit\Framework\TestCase {
      * 
      * @return null
      */
-     public function testConvertRTo2() {
+     public function testConversionOfRTo2() {
         $this->assertEquals(
             $this->Jankenpo->convertCharacterOptionToIntegerOption('r'),
             2
@@ -57,7 +57,7 @@ class JankenpoTest extends \PHPUnit\Framework\TestCase {
      * 
      * @return null
      */
-    public function testConvertSTo3() {
+    public function testConversionOfSTo3() {
         $this->assertEquals(
             $this->Jankenpo->convertCharacterOptionToIntegerOption('s'),
             3
@@ -71,11 +71,68 @@ class JankenpoTest extends \PHPUnit\Framework\TestCase {
      * 
      * @return null
      */
-    public function testExceptionInErrorOfCharacterUserOptionConversion() {
+    public function testExceptionInCharacterUserOptionConversion() {
         $this->expectException(
             \OutOfBoundsException::class
         );
 
         $this->Jankenpo->convertCharacterOptionToIntegerOption('w');
+    }
+
+    /**
+     * Tests the conversion of '1' to 'paper'
+     * 
+     * @access public
+     * 
+     * @return null
+     */
+    public function testConversionOf1ToPaper() {
+        $this->assertEquals(
+            $this->Jankenpo->convertIntegerOptionToStringOption(1),
+            'paper'
+        );
+    }
+
+    /**
+     * Tests the conversion of '2' to rock
+     * 
+     * @access public
+     * 
+     * @return null
+     */
+     public function testConversionOf2ToRock() {
+        $this->assertEquals(
+            $this->Jankenpo->convertIntegerOptionToStringOption(2),
+            'rock'
+        );
+    }
+
+    /**
+     * Tests the conversion of 's' to 3
+     * 
+     * @access public
+     * 
+     * @return null
+     */
+    public function testConversionOf3ToScissor() {
+        $this->assertEquals(
+            $this->Jankenpo->convertIntegerOptionToStringOption(3),
+            'scissor'
+        );
+    }
+
+    /**
+     * Tests the throwing of an exception in the conversion
+     * 
+     * @access public
+     * 
+     * @return null
+     */
+    public function testExceptionInIntegerUserOptionConversion() {
+        $this->expectException(
+            \OutOfBoundsException::class
+        );
+
+        $this->Jankenpo->convertIntegerOptionToStringOption(4);
     }    
 }
