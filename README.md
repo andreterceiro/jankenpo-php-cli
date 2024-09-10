@@ -16,7 +16,9 @@ Please execute in the root directory:
 
 ## Automated tests
 
-Please first install Composer. [Oficial website](https://getcomposer.org/)
+Please first install Composer. [Oficial website](https://getcomposer.org/).
+
+Why? Because we manage the dependencies in this project with Composer and PHPUnit is a dependency in this project.  
 
 After install Composer, please run:
 
